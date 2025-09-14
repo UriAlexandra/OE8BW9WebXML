@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kezdőlap</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        div {
+            width: 100%;
+            height: 400px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(66, 20, 172);
+            font-weight: bold;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div>
+        <a href="kezdolap.html">
+            <img src="img/iit.jpg" alt="Kezdőlap kép">
+        </a>
+    </div>
+
+    <nav>
+        <a href="database.html">Adatbázis
+            rendszerek</a> |
+        <a href="webtech.html">Web technológiák 1</a> |
+        <a href="webxml.html">Webes adatkezelő
+            környezetek</a>
+    </nav>
+    <main>
+        <iframe width="60%" height="400" src="https://www.youtube.com/embed/GxmfcnU3feo" title="YouTube video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </main>
+    <footer>Uri Alexandra Nikoletta, OE8BW9, 2025</footer>
 </body>
+
 </html>

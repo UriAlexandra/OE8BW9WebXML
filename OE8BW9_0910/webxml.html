@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webes adatkezelő környezetek</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            width: 100%;
+            height: 400px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .tematika {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        ul {
+            flex: 1;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        .tematika img {
+            flex: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(38, 11, 175);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="kezdolap.html">
+            <img src="img/iit.jpg" alt="Kezdőlap kép">
+        </a>
+    </div>
+
+    <nav>
+        <a href="database.html">Adatbázis
+            rendszerek</a> |
+        <a href="webtech.html">Web technológiák 1</a> |
+        <a href="webxml.html">Webes adatkezelő
+            környezetek</a>
+    </nav>
+    <main>
+        <h1>Webes adatkezelő környezetek</h1>
+        <p>Oktató: Dr. Kovács László</p>
+        <p>Kredit: 5</p>
+        <h1>Tematika</h1>
+        <div class="tematika">
+            <ul>
+                <li>XML adatmodell</li>
+                <li>XML dokumentum elemei</li>
+                <li>DTD szabvány</li>
+                <li>XMLSchema szabvány elemei</li>
+                <li>Adatelemek hivatkozása: XPath szabvány</li>
+                <li>Integritási szabályok definiálása</li>
+                <li>XML kezelése gazdanyelvi környezetben</li>
+                <li>SAX és DOM API szabványok áttekintése, Java környezet</li>
+                <li>Dokumentum konverzió: XSL és XSLT</li>
+                <li>XSLT feldolgozás: szelekció, ciklusképzés, feltételes végrehajtás</li>
+                <li>XSLT: csoportképzés, aggregáció, változók használata</li>
+                <li>Dinamikus struktúra felépítés</li>
+                <li>XML adatok generálása adatbázisokból</li>
+                <li>SQL/XML szabvány elemei</li>
+                <li>JSON modell</li>
+            </ul>
+
+            <img src="img/webxml.jpg" alt="Web XML kép">
+
+        </div>
+    </main>
+    <footer>Uri Alexandra Nikoletta, OE8BW9, 2025</footer>
+</body>
+
+</html>
