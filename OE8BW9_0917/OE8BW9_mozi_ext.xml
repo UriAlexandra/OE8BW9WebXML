@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mozi> 
+    <film id="txn_nxm_2jb" mufaj="horror">
+        <rendezo id="nzk_4xm_2jb" nev="alex" />
+        <szinesz id="u5g_4xm_2jb" nev="Madison_Ivy" />
+        <szinesz id="a">
+            <gyerekszinesz />
+            <musikalszinesz />
+            <szinkronszinesz />
+        </szinesz>
+        <iro id="trv_4xm_2jb" />
+    </film>
+
+<film id="abc_123" mufaj="vigjatek">
+        <rendezo id="rnd_001" nev="Kovacs_Peter" />
+        <rendezo id="rnd_002" nev="Szabo_Anna" />
+
+        <szinesz id="act_001" nev="Nagy_Janos" />
+        <szinesz id="act_002" nev="Toth_Eva" />
+
+        <iro id="iro_001" nev="Kiss_Laszlo" />
+        <iro id="iro_002" nev="Balogh_Maria" />
+    </film>
+</mozi>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UAN_orarend>
+    <ora id="1" tipus="elmélet" >
+        <tantargy>Mesterséges inteligencia alapok</tantargy>
+        <idopont> 
+            <nap>Kedd</nap>
+            <tol>12</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszín>32.ea</helyszín>
+        <oktato>Kunné Dr. Tamás Judit</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
+
+    <ora id="2" tipus="gyakorlat" >
+        <tantargy>Mesterséges inteligencia alapok</tantargy>
+        <idopont> 
+            <nap>Kedd</nap>
+            <tol>14</tol>
+            <ig>16</ig>
+        </idopont>
+        <helyszín>32.ea</helyszín>
+        <oktato>Kunné Dr. Tamás Judit</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
+
+    <ora id="3" tipus="elmélet" >
+        <tantargy>Mobil programozási alapok</tantargy>
+        <idopont> 
+            <nap>Hétfő</nap>
+            <tol>16</tol>
+            <ig>18</ig>
+        </idopont>
+        <helyszín>L101.</helyszín>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
+
+    <ora id="4" tipus="gyakorlat" >
+        <tantargy>Mobil programozási alapok</tantargy>
+        <idopont> 
+            <nap>Hétfő</nap>
+            <tol>18</tol>
+            <ig>20</ig>
+        </idopont>
+        <helyszín>L101.</helyszín>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
+
+    <ora id="5" tipus="gyakorlat" >
+        <tantargy>Német műszaki szaknyelv </tantargy>
+        <idopont> 
+            <nap>Hétfő</nap>
+            <tol>12</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszín>L101.</helyszín>
+        <oktato>Szokoli Katalin</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
+
+    <ora id="6" tipus="elmélet" >
+        <tantargy>Web technológiák 1.</tantargy>
+        <idopont> 
+            <nap>Hétfő</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszín>5.ea</helyszín>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
+
+    <ora id="7" tipus="gyakorlat" >
+        <tantargy>Web technológiák 1.</tantargy>
+        <idopont> 
+            <nap>Hétfő</nap>
+            <tol>14</tol>
+            <ig>16</ig>
+        </idopont>
+        <helyszín>L101.</helyszín>
+        <oktato>Dr. Agárdi Anita</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
+
+    <ora id="8" tipus="elmélet" >
+        <tantargy>Webes adatkezelő környezetek</tantargy>
+        <idopont> 
+            <nap>Szerda</nap>
+            <tol>08</tol>
+            <ig>10</ig>
+        </idopont>
+        <helyszín>A1. 310</helyszín>
+        <oktato>Dr. Kovács László</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
+
+    <ora id="8" tipus="gyakorlat" >
+        <tantargy>Webes adatkezelő környezetek</tantargy>
+        <idopont> 
+            <nap>Szerda</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszín>In. 103</helyszín>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
+    
+
+</UAN_orarend>
