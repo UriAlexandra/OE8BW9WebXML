@@ -107,6 +107,28 @@
         <oktato>Dr. Bednarik László</oktato>
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
-    
 
+    <ora id="9" tipus="elmélet" >
+        <tantargy>Windows rendszergazda</tantargy>
+        <idopont> 
+            <nap>Kedd</nap>
+            <tol>8</tol>
+            <ig>10</ig>
+        </idopont>
+        <helyszín>In. 101</helyszín>
+        <oktato>Dr. Wagner György</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
+
+    <ora id="10" tipus="gyakorlat" >
+        <tantargy>Windows rendszergazda</tantargy>
+        <idopont> 
+            <nap>Szerda</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszín>In. 103</helyszín>
+        <oktato>Dr. Wagner György</oktato>
+        <szak>Mérnök-informatikus BSc</szak>
+    </ora>
 </UAN_orarend>
