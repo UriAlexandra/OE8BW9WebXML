@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <konferencia>
-    <cím/>
-    <előadók>
-<név/>
-<adószám/> 
-<lakcím/>
-    </előadók> 
-    <dátum/>
-    <helyszín/>
-    <hallgatók>
-        <hallgató>
-<név/>
-<lakcím/>
-</hallgató>
-    </hallgatók>    
+  <cim>Nemzetközi Adatbázis Konferencia 2025</cim>
+  <helyszin>Budapest, Műszaki Egyetem, A épület, 101. terem</helyszin>
+  <datum>2025-11-12</datum>
 
-    
+  <eloado>
+    <nev>Dr. Kovács Péter</nev>
+    <lakcim>Budapest, Fő utca 12.</lakcim>
+    <adoszam>12345678-1-12</adoszam>
+  </eloado>
+
+  <hallgatok>
+    <hallgato>
+      <nev>Horváth Anna</nev>
+      <lakcim>Gödöllő, Iskola út 3.</lakcim>
+    </hallgato>
+    <hallgato>
+      <nev>Nagy Bence</nev>
+      <lakcim>Szeged, Petőfi tér 7.</lakcim>
+    </hallgato>
+    <hallgato>
+      <nev>Szabó Eszter</nev>
+      <lakcim>Debrecen, Kossuth u. 5.</lakcim>
+    </hallgato>
+  </hallgatok>
 </konferencia>
