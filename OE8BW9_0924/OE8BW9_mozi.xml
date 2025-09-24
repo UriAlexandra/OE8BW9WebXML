@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<!DOCTYPE mozi SYSTEM "OE8BW9_mozi.dtd">-->
+
+<mozi>
+    <film id="txm_nxm_2jb" mufaj="horror">
+        <rendezo id="txm_nxm_3jb" nev="Alex"/>
+        <szinesz id="txm_nxm_4jb" nev="József"/>
+        <iro id="txm_nxm_5jb" />
+    </film>
+</mozi>
