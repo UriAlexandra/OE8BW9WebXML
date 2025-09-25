@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE OE8BW9_kurzusfelvetel SYSTEM "OE8BW9_kurzusfelvetel.dtd">
+
+<OE8BW9_kurzusfelvetel tanev="2025/26/I" egyetem="Miskolci Egyetem">
+    <hallgato>
+        <hnev>Kiss Péter</hnev>
+        <szulev>2003</szulev>
+        <szak evf="3">Mérnökinformatikus</szak>
+    </hallgato>
+
+    <kurzusok>
+        <kurzus id="HE9KJ5" jovahagyas="igen" nyelv="magyar">
+            <kurzusnev>Adatbázis rendszerek</kurzusnev>
+            <kredit>5</kredit>
+            <hely>A/101</hely>
+            <idopont>Hétfő 10:15-12:00</idopont>
+            <idopont>Szerda 12:15-14:00</idopont>
+            <oktato>Dr. Nagy Béla</oktato>
+        </kurzus>
+
+        <kurzus id="KJ5GO1" jovahagyas="igen" nyelv="angol">
+            <kurzusnev>Mobil Programozás</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf.201</hely>
+            <idopont>Kedd 14:15-16:00</idopont>
+            <oktato>Dr. Szabó Anna</oktato>
+            <oraado>Molnár Gergely</oraado>
+        </kurzus>
+
+        <kurzus id="ZG7TI0" jovahagyas="nem" nyelv="magyar">
+            <kurzusnev>Web technológiák 1.</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf. 202</hely>
+            <idopont>Csütörtök 8:15-10:00</idopont>
+            <oktato>Dr. Kovács László</oktato>
+        </kurzus>
+
+        <kurzus id="KJ0LX6" jovahagyas="igen" nyelv="magyar">
+            <kurzusnev>Mesterséges intelligencia alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>A/305</hely>
+            <idopont>Péntek 10:15-12:00</idopont>
+            <oktato>Dr. Horváth Eszter</oktato>
+            <oraado>Nagy Gábor Ferenc</oraado>
+        </kurzus>
+    </kurzusok>
+</OE8BW9_kurzusfelvetel>
