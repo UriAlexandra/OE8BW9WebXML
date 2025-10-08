@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE OE8BW9_orarend SYSTEM "OE8BW9_orarend.dtd">
-
-<OE8BW9_orarend>
-    <ora id="egy" tipus="gyakorlat">
+<OE8BW9_orarend xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OE8BW9_orarend.xsd">
+    <ora id="1" tipus="gyakorlat">
         <targy>Web technológiák 1.</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -15,7 +13,7 @@
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
     
-    <ora id="ketto" tipus="gyakorlat">
+    <ora id="2" tipus="gyakorlat">
         <targy>Német műszaki szaknyelv 1.</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -27,7 +25,7 @@
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
 
-    <ora id="harom" tipus="gyakorlat">
+    <ora id="3" tipus="gyakorlat">
         <targy>Web technológiák 1.</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -39,7 +37,7 @@
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
 
-    <ora id="negy" tipus="eloadas">
+    <ora id="4" tipus="eloadas">
         <targy>Mobil programozási alapok</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -51,7 +49,7 @@
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
 
-    <ora id="ot" tipus="gyakorlat">
+    <ora id="5" tipus="gyakorlat">
         <targy>Mobil programozási alapok</targy>
         <idopont>
             <nap>Hétfő</nap>
@@ -63,7 +61,7 @@
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
 
-    <ora id="hat" tipus="gyakorlat">
+    <ora id="6" tipus="gyakorlat">
         <targy>Windows rendszergazda</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -75,7 +73,7 @@
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
 
-    <ora id="het" tipus="eloadas">
+    <ora id="7" tipus="eloadas">
         <targy>Mesterséges intelligencia alapok</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -87,7 +85,7 @@
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
 
-    <ora id="nyolc" tipus="gyakorlat">
+    <ora id="8" tipus="gyakorlat">
         <targy>Mesterséges intelligencia alapok</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -99,7 +97,7 @@
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
 
-    <ora id="kilenc" tipus="eloadas"> 
+    <ora id="9" tipus="eloadas"> 
         <targy>Windows rendszergazda</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -111,7 +109,7 @@
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
 
-    <ora id="tiz" tipus="eloadas">
+    <ora id="10" tipus="eloadas">
         <targy>Webes adatkezelő környezetek</targy>
         <idopont>
             <nap>Szerda</nap>
@@ -123,7 +121,7 @@
         <szak>Mérnök-informatikus BSc</szak>
     </ora>
 
-    <ora id="tizenegy" tipus="gyakorlat">
+    <ora id="11" tipus="gyakorlat">
         <targy>Webes adatkezelő környezetek</targy>
         <idopont>
             <nap>Szerda</nap>

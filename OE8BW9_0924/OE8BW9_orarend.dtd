@@ -1,4 +1,4 @@
-<!ELEMENT UAN_orarend (ora+)>
+<!ELEMENT OE8BW9_orarend (ora+)>
 
 <!ELEMENT ora (targy, idopont, helyszin, oktato, szak)>
 <!ATTLIST ora id ID #REQUIRED>
