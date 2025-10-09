@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+
+    <!-- Fő elem -->
+    <xs:element name="UAN_orarend">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ora" type="OraTipus" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!-- ===================== -->
+    <!--       Típusok         -->
+    <!-- ===================== -->
+
+    <!-- Óra típusa -->
+    <xs:complexType name="OraTipus">
+        <xs:sequence>
+            <xs:element name="targy" type="xs:string" />
+            <xs:element name="idopont" type="IdopontTipus" />
+            <xs:element name="helyszin" type="xs:string" />
+            <xs:element name="oktato" type="xs:string" />
+            <xs:element name="szak" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:positiveInteger" use="required" />
+        <xs:attribute name="tipus" type="OraTipusTipus" use="required" />
+    </xs:complexType>
+
+
+    <!-- Időpont típusa -->
+    <xs:complexType name="IdopontTipus">
+        <xs:sequence>
+            <xs:element name="nap" type="NapTipus" />
+            <xs:element name="tol" type="OraErtekTipus" />
+            <xs:element name="ig" type="OraErtekTipus" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!-- Nap típus: előre meghatározott értékek -->
+    <xs:simpleType name="NapTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Hétfő" />
+            <xs:enumeration value="Kedd" />
+            <xs:enumeration value="Szerda" />
+            <xs:enumeration value="Csütörtök" />
+            <xs:enumeration value="Péntek" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <!-- Óra kezdési/befejezési érték (0–24 között) -->
+    <xs:simpleType name="OraErtekTipus">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="24" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <!-- Óratípus (pl. előadás, gyakorlat, labor stb.) -->
+    <xs:simpleType name="OraTipusTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="eloadas" />
+            <xs:enumeration value="gyakorlat" />
+            <xs:enumeration value="labor" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
