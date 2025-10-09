@@ -61,8 +61,6 @@
     <xs:simpleType name="egyetemTipus">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Miskolci Egyetem"/>
-            <xs:enumeration value="Budapesti Műszaki Egyetem"/>
-            <xs:enumeration value="Debreceni Egyetem"/>
         </xs:restriction>
     </xs:simpleType>
 
