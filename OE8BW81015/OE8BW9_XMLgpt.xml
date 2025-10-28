@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OE8BW9_vendéglátás>
+    <Étterem>
+        <Név>Étterem neve</Név>
+        <Cím>
+            <Város>Budapest</Város>
+            <Utca>Fő utca</Utca>
+            <Házszám>1</Házszám>
+        </Cím>
+        <Csillag>4</Csillag>
+        <Főszakács>
+            <Név>Kiss János</Név>
+            <Évkor>45</Évkor>
+            <Végzettség>Mester szakács</Végzettség>
+            <Szakács>
+                <Név>Nagy Péter</Név>
+                <Részleg>Melegkonyha</Részleg>
+                <Végzettség>Szakács OKJ</Végzettség>
+                <Gyakornok>
+                    <Név>Kovács László</Név>
+                    <Gyakorlat>Konyhai</Gyakorlat>
+                    <Műszak>Délelőtt</Műszak>
+                    <Kezdete>2025-06-01</Kezdete>
+                    <Időtartama>3 hónap</Időtartama>
+                </Gyakornok>
+            </Szakács>
+        </Főszakács>
+        <Rendelések>
+            <Rendelés>
+                <Összeg>8500</Összeg>
+                <Étel>Marhapörkölt</Étel>
+                <Vendég>
+                    <Név>Tóth Anna</Név>
+                    <Évkor>28</Évkor>
+                    <Cím>
+                        <Város>Szeged</Város>
+                        <Utca>Kossuth Lajos utca</Utca>
+                        <Házszám>12</Házszám>
+                    </Cím>
+                </Vendég>
+            </Rendelés>
+        </Rendelések>
+    </Étterem>
+</FXVARU_vendéglátás>

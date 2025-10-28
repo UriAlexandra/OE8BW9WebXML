@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ételrendelések xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaOE8BW9.xsd">
+	<!-- rendelések -->
+	<rendelés RID="1" MID="1" FID="1">
+		<dátum>2025-01-01</dátum>
+		<kiszállítási_cím>Arany_János_utca_1.</kiszállítási_cím>
+		<összeg>6750</összeg>
+	</rendelés>
+	
+	<rendelés RID="2" MID="2" FID="2">
+		<dátum>2025-02-02</dátum>
+		<kiszállítási_cím>Nagy_Lasjos_király_útja_2.</kiszállítási_cím>
+		<összeg>6060</összeg>
+	</rendelés>
+	
+	<rendelés RID="3" MID="1" FID="3">
+		<dátum>2025-10-10</dátum>
+		<kiszállítási_cím>Arany_János_utca_1.</kiszállítási_cím>
+		<összeg>10880</összeg>
+	</rendelés>
+	
+	<rendelés RID="4" MID="3" FID="4">
+		<dátum>2025-11-04</dátum>
+		<kiszállítási_cím>Kuruc_utca_23.</kiszállítási_cím>
+		<összeg>9470</összeg>
+	</rendelés>
+	
+	<!-- megrendelők -->
+	<megrendelő MID="1">
+		<visszatérő_vendég>igen</visszatérő_vendég>
+		<telefonszám>0620000001</telefonszám>
+		<név>Első_Elemér</név>
+	</megrendelő>
+	
+	<megrendelő MID="2">
+		<visszatérő_vendég>nem</visszatérő_vendég>
+		<telefonszám>0620202020</telefonszám>
+		<név>Második_Mária</név>
+	</megrendelő>
+	
+	<megrendelő MID="3">
+		<visszatérő_vendég>nem</visszatérő_vendég>
+		<telefonszám>0620987654321</telefonszám>
+		<név>Kis_Pista</név>
+	</megrendelő>
+	
+	<!-- fizetések -->
+	<fizetés FID="1">
+		<átvitel_ideje>2025-01-01</átvitel_ideje>
+		<kupon>nem</kupon>
+		<fizetés_módja>készpénz</fizetés_módja>
+	</fizetés>
+	
+	<fizetés FID="2">
+		<átvitel_ideje>2025-02-09</átvitel_ideje>
+		<kupon>igen</kupon>
+		<fizetés_módja>bankkártya</fizetés_módja>
+	</fizetés>
+	
+	<fizetés FID="3">
+		<átvitel_ideje>2025-10-11</átvitel_ideje>
+		<kupon>igen</kupon>
+		<fizetés_módja>készpénz</fizetés_módja>
+	</fizetés>
+	
+	<fizetés FID="4">
+		<átvitel_ideje>2025-11-07</átvitel_ideje>
+		<kupon>nem</kupon>
+		<fizetés_módja>szép-kártya</fizetés_módja>
+	</fizetés>
+	
+	<!-- megrendelt ételek kapcsoló -->
+	<rendelt RID="1" EID="1">
+		<mennyiség>2</mennyiség>
+	</rendelt>
+	
+	<rendelt RID="1" EID="6">
+		<mennyiség>1</mennyiség>
+	</rendelt>
+	
+	<rendelt RID="2" EID="3">
+		<mennyiség>1</mennyiség>
+	</rendelt>
+	
+	<rendelt RID="2" EID="5">
+		<mennyiség>2</mennyiség>
+	</rendelt>
+	
+	<rendelt RID="3" EID="4">
+		<mennyiség>4</mennyiség>
+	</rendelt>
+	
+	<rendelt RID="4" EID="2">
+		<mennyiség>3</mennyiség>
+	</rendelt>
+	
+	<rendelt RID="4" EID="3">
+		<mennyiség>1</mennyiség>
+	</rendelt>
+	
+	<!-- ételek -->
+	<étel EID="1">
+		<név>Hawaii</név>
+		<ár>2250</ár>
+		<allergén>Glutén</allergén>
+		<allergén>Tojás</allergén>
+		<típus>Pizza</típus>
+	</étel>
+	
+	<étel EID="2">
+		<név>Piedone</név>
+		<ár>2250</ár>
+		<allergén>Glutén</allergén>
+		<allergén>Tojás</allergén>
+		<típus>Pizza</típus>
+	</étel>
+	
+	<étel EID="3">
+		<név>Szezámos_csirke_box</név>
+		<ár>2720</ár>
+		<allergén>Szezámmag</allergén>
+		<típus>Húsétel</típus>
+	</étel>
+	
+	<étel EID="4">
+		<név>Gyros_tál</név>
+		<ár>2720</ár>
+		<allergén>Szezámmag</allergén>
+		<allergén>Glutén</allergén>
+		<típus>Húsétel</típus>
+	</étel>
+	
+	<étel EID="5">
+		<név>Görög_saláta</név>
+		<ár>1670</ár>
+		<allergén></allergén>
+		<típus>Saláta</típus>
+	</étel>
+	
+	<étel EID="6">
+		<név>4sajtos</név>
+		<ár>2550</ár>
+		<allergén>Glutén</allergén>
+		<allergén>Tojás</allergén>
+		<típus>Pizza</típus>
+	</étel>
+	
+	<!-- akciók -->
+	<akció AID="1" EID="1">
+		<időtartam>
+			<kezdete>2025-01-01</kezdete>
+			<vége>2025-02-01</vége>
+		</időtartam>
+		<leárazás>10</leárazás>
+	</akció>
+	
+	<akció AID="2" EID="1">
+		<időtartam>
+			<kezdete>2025-06-01</kezdete>
+			<vége>2025-09-01</vége>
+		</időtartam>
+		<leárazás>10</leárazás>
+	</akció>
+	
+	<akció AID="3" EID="2">
+		<időtartam>
+			<kezdete>2025-10-31</kezdete>
+			<vége>2025-11-30</vége>
+		</időtartam>
+		<leárazás>50</leárazás>
+	</akció>
+	
+	<akció AID="4" EID="6">
+		<időtartam>
+			<kezdete>2025-04-15</kezdete>
+			<vége>2025-05-15</vége>
+		</időtartam>
+		<leárazás>15</leárazás>
+	</akció>
+	
+	<akció AID="5" EID="6">
+		<időtartam>
+			<kezdete>2025-09-01</kezdete>
+			<vége>2025-11-30</vége>
+		</időtartam>
+		<leárazás>30</leárazás>
+	</akció>
+</ételrendelések>

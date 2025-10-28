@@ -13,7 +13,7 @@
         <nev>Gundel</nev>
         <cím>
             <varos>Budapest</varos>
-                <utca>GUndel Károly</utca>
+                <utca>Gundel Károly</utca>
                 <hazszam>4</hazszam>
             </cím>
         <csillag>5</csillag>
@@ -63,33 +63,33 @@
      </szakacs>
 
      <!-- Gyakornokok -->
-    <gyakornok gykod="g1" e_g="e1">
+    <gyakornok gykod="g1" e_gy="e1">
         <nev>Szilágyi István</nev>
         <gyakorlat>
             <kezdet>2021.06.01</kezdet>
             <időtartam>4 hónap</időtartam>
         </gyakorlat>
-        <műszak>Délután</műszak>
+        <muszak>Délután</muszak>
     </gyakornok>
 
-    <gyakornok gykod="g2" e_g="e2">
+    <gyakornok gykod="g2" e_gy="e2">
         <nev>Bordás Dávid</nev>
         <gyakorlat>
             <kezdet>2021.08.20</kezdet>
             <időtartam>2 hónap</időtartam>
         </gyakorlat>
-        <műszak>Délelőtt</műszak>
-        <műszak>Este</műszak>
+        <muszak>Délelőtt</muszak>
+        <muszak>Este</muszak>
     </gyakornok>
 
-    <gyakornok gykod="g3" e_g="e3">
+    <gyakornok gykod="g3" e_gy="e3">
         <nev>Kis Ferenc</nev>
         <gyakorlat>
             <kezdet>2021.09.19</kezdet>
             <időtartam>6 hónap</időtartam>
         </gyakorlat>
-        <műszak>Délelőtt</műszak>
-        <műszak>Este</műszak>
+        <muszak>Délelőtt</muszak>
+        <muszak>Este</muszak>
     </gyakornok>
 
     <vendeg vkod="v1" e_v="e1">

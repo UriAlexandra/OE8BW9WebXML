@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="ételrendelések">	
+		<xs:complexType>
+	            <xs:sequence>
+	                <xs:element name="rendelés" type="rendelésTipus" maxOccurs="unbounded"/>
+	                <xs:element name="megrendelő" type="megrendelőTipus" maxOccurs="unbounded"/>
+	                <xs:element name="fizetés" type="fizetésTipus" maxOccurs="unbounded"/>
+	                <xs:element name="rendelt" type="rendeltTipus" maxOccurs="unbounded"/>
+	                <xs:element name="étel" type="ételTipus" maxOccurs="unbounded"/>
+	                <xs:element name="akció" type="akcióTipus" maxOccurs="unbounded"/>
+	            </xs:sequence>
+		</xs:complexType>
+		
+		
+		<!-- Primary keys -->
+		<xs:key name="rendelésKulcs">
+            <xs:selector xpath="rendelés"/>
+            <xs:field xpath="@RID"/>
+        </xs:key>
+        
+        <xs:key name="megrendelőKulcs">
+            <xs:selector xpath="megrendelő"/>
+            <xs:field xpath="@MID"/>
+        </xs:key>
+        
+        <xs:key name="fizetésKulcs">
+            <xs:selector xpath="fizetés"/>
+            <xs:field xpath="@FID"/>
+        </xs:key>
+        
+        <xs:key name="ételKulcs">
+            <xs:selector xpath="étel"/>
+            <xs:field xpath="@EID"/>
+        </xs:key>
+        
+        <xs:key name="akciöKulcs">
+            <xs:selector xpath="akció"/>
+            <xs:field xpath="@AID"/>
+        </xs:key>
+        
+        <!-- Foreign keys -->
+        <xs:keyref refer="megrendelőKulcs" name="rendelésMegrendelőIdegenKulcs">
+            <xs:selector xpath="rendelés"/>
+            <xs:field xpath="@MID"/>
+        </xs:keyref>  
+        
+        <xs:keyref refer="rendelésKulcs" name="rendeltRendelésIdegenKulcs">
+            <xs:selector xpath="rendelt"/>
+            <xs:field xpath="@RID"/>
+        </xs:keyref>
+        
+        <xs:keyref refer="ételKulcs" name="rendeltÉtelIdegenKulcs">
+            <xs:selector xpath="rendelt"/>
+            <xs:field xpath="@EID"/>
+        </xs:keyref>
+        
+        <xs:keyref refer="ételKulcs" name="akcióÉtelIdegenKulcs">
+            <xs:selector xpath="akció"/>
+            <xs:field xpath="@EID"/>
+        </xs:keyref>
+        
+        <!-- 1-1 -->
+        <xs:unique name="rendelésFizetésEgy">
+            <xs:selector xpath="rendelés"/>
+            <xs:field xpath="@FID"/>
+        </xs:unique>
+    </xs:element>	    
+      
+    <!-- Sajat tipusok -->
+    <xs:complexType name="rendelésTipus">
+		<xs:sequence>
+			<xs:element name="dátum" type="xs:date"/>          
+			<xs:element name="kiszállítási_cím" type="xs:string"/> 
+			<xs:element name="összeg" type="xs:integer"/>   	            
+		</xs:sequence>
+		<xs:attribute name="RID" type="xs:integer" use="required"/>
+		<xs:attribute name="MID" type="xs:integer" use="required"/>
+		<xs:attribute name="FID" type="xs:integer" use="required"/>
+   	</xs:complexType>  
+   	
+   	<xs:complexType name="megrendelőTipus">
+		<xs:sequence>
+			<xs:element name="visszatérő_vendég">         
+				<xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="igen"/>
+                        <xs:enumeration value="nem"/>
+                    </xs:restriction>
+                </xs:simpleType> 
+            </xs:element>
+			<xs:element name="telefonszám" type="xs:string"/> 
+			<xs:element name="név" type="xs:string"/>   	            
+		</xs:sequence>
+		<xs:attribute name="MID" type="xs:integer" use="required"/>
+   	</xs:complexType>  
+   	
+   	 <xs:complexType name="fizetésTipus">
+		<xs:sequence>
+			<xs:element name="átvitel_ideje" type="xs:date"/>          
+			<xs:element name="kupon"> 
+				<xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="igen"/>
+                        <xs:enumeration value="nem"/>
+                    </xs:restriction>
+                </xs:simpleType> 
+            </xs:element>
+			<xs:element name="fizetés_módja">  
+			<xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="bankkártya"/>
+                        <xs:enumeration value="készpénz"/>
+                        <xs:enumeration value="szép-kártya"/>
+                    </xs:restriction>
+                </xs:simpleType> 
+            </xs:element> 	            
+		</xs:sequence>	
+		<xs:attribute name="FID" type="xs:integer" use="required"/>
+   	</xs:complexType>
+   	
+   	<xs:complexType name="rendeltTipus">
+		<xs:sequence>
+			<xs:element name="mennyiség" type="xs:integer"/>   	            
+		</xs:sequence>
+		<xs:attribute name="RID" type="xs:integer" use="required"/>
+		<xs:attribute name="EID" type="xs:integer" use="required"/>
+   	</xs:complexType>     	
+   	     		
+	<xs:complexType name="ételTipus">
+		<xs:sequence>
+			<xs:element name="név" type="xs:string"/>          
+			<xs:element name="ár" type="xs:integer"/> 
+			<xs:element name="allergén" type="xs:string" maxOccurs="unbounded"/>  
+			<xs:element name="típus" type="xs:string"/>    	            
+		</xs:sequence>
+		<xs:attribute name="EID" type="xs:integer" use="required"/>
+   	</xs:complexType> 
+   	
+   	<xs:complexType name="akcióTipus">
+		<xs:sequence>
+			<xs:element name="időtartam">
+				<xs:complexType>
+                    <xs:sequence>  
+                      	<xs:element name="kezdete" type="xs:date"/> 
+                      	<xs:element name="vége" type="xs:date"/> 
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>    
+			<xs:element name="leárazás" type="xs:integer"/>  	            
+		</xs:sequence>
+		<xs:attribute name="EID" type="xs:integer" use="required"/>
+		<xs:attribute name="AID" type="xs:integer" use="required"/>
+   	</xs:complexType>  
+	
+</xs:schema>
