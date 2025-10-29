@@ -11,7 +11,7 @@
 	                <xs:element name="akció" type="akcióTipus" maxOccurs="unbounded"/>
 	            </xs:sequence>
 		</xs:complexType>
-		
+
 		
 		<!-- Primary keys -->
 		<xs:key name="rendelésKulcs">
@@ -34,7 +34,7 @@
             <xs:field xpath="@EID"/>
         </xs:key>
         
-        <xs:key name="akciöKulcs">
+        <xs:key name="akcióKulcs">
             <xs:selector xpath="akció"/>
             <xs:field xpath="@AID"/>
         </xs:key>
