@@ -70,34 +70,49 @@
 		<fizetés_módja>szép-kártya</fizetés_módja>
 	</fizetés>
 	
-	<!-- megrendelt ételek kapcsoló -->
+		<!-- megrendelt ételek kapcsoló -->
 	<rendelt RID="1" EID="1">
 		<mennyiség>2</mennyiség>
+		<tétel_ár>2250</tétel_ár>
+		<megjegyzés>extra sajt</megjegyzés>
 	</rendelt>
 	
 	<rendelt RID="1" EID="6">
 		<mennyiség>1</mennyiség>
+		<tétel_ár>2550</tétel_ár>
+		<megjegyzés>gluténmentes tészta</megjegyzés>
 	</rendelt>
 	
 	<rendelt RID="2" EID="3">
 		<mennyiség>1</mennyiség>
+		<tétel_ár>2720</tétel_ár>
+		<megjegyzés>normál adag</megjegyzés>
 	</rendelt>
 	
 	<rendelt RID="2" EID="5">
 		<mennyiség>2</mennyiség>
+		<tétel_ár>1670</tétel_ár>
+		<megjegyzés>öntet nélkül</megjegyzés>
 	</rendelt>
 	
 	<rendelt RID="3" EID="4">
 		<mennyiség>4</mennyiség>
+		<tétel_ár>2720</tétel_ár>
+		<megjegyzés>extra sajt</megjegyzés>
 	</rendelt>
 	
 	<rendelt RID="4" EID="2">
 		<mennyiség>3</mennyiség>
+		<tétel_ár>2250</tétel_ár>
+		<megjegyzés>csípős</megjegyzés>
 	</rendelt>
 	
 	<rendelt RID="4" EID="3">
 		<mennyiség>1</mennyiség>
+		<tétel_ár>2720</tétel_ár>
+		<megjegyzés>extra szezámmag</megjegyzés>
 	</rendelt>
+
 	
 	<!-- ételek -->
 	<étel EID="1">

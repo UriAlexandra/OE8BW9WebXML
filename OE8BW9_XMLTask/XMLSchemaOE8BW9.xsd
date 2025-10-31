@@ -66,7 +66,7 @@
             <xs:field xpath="@FID"/>
         </xs:unique>
     </xs:element>	    
-      
+    
     <!-- Sajat tipusok -->
     <xs:complexType name="rendelésTipus">
 		<xs:sequence>
@@ -119,9 +119,12 @@
 		<xs:attribute name="FID" type="xs:integer" use="required"/>
    	</xs:complexType>
    	
+    <!-- Sajat tipusok -->
    	<xs:complexType name="rendeltTipus">
 		<xs:sequence>
-			<xs:element name="mennyiség" type="xs:integer"/>   	            
+			<xs:element name="mennyiség" type="xs:integer"/>  
+            <xs:element name="tétel_ár" type="xs:integer"/>   	            
+            <xs:element name="megjegyzés" type="xs:string" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="RID" type="xs:integer" use="required"/>
 		<xs:attribute name="EID" type="xs:integer" use="required"/>
