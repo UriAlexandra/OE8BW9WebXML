@@ -60,7 +60,7 @@
             <xs:field xpath="@EID"/>
         </xs:keyref>
         
-        <!-- 1-1 -->
+        <!-- 1-1 Kapcsolat-->
         <xs:unique name="rendelésFizetésEgy">
             <xs:selector xpath="rendelés"/>
             <xs:field xpath="@FID"/>

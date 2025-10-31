@@ -4,25 +4,25 @@
 	<!-- rendelések -->
 	<rendelés RID="1" MID="1" FID="1">
 		<dátum>2025-01-01</dátum>
-		<kiszállítási_cím>Arany_János_utca_1.</kiszállítási_cím>
+		<kiszállítási_cím>Arany János utca 1.</kiszállítási_cím>
 		<összeg>6750</összeg>
 	</rendelés>
 	
 	<rendelés RID="2" MID="2" FID="2">
 		<dátum>2025-02-02</dátum>
-		<kiszállítási_cím>Nagy_Lajos_király_útja_2.</kiszállítási_cím>
+		<kiszállítási_cím>Irinyi János utca 10.</kiszállítási_cím>
 		<összeg>6060</összeg>
 	</rendelés>
 	
 	<rendelés RID="3" MID="1" FID="3">
 		<dátum>2025-10-10</dátum>
-		<kiszállítási_cím>Arany_János_utca_1.</kiszállítási_cím>
+		<kiszállítási_cím>Petőfi Séndor utca 1.</kiszállítási_cím>
 		<összeg>10880</összeg>
 	</rendelés>
 	
 	<rendelés RID="4" MID="3" FID="4">
 		<dátum>2025-11-04</dátum>
-		<kiszállítási_cím>Kuruc_utca_23.</kiszállítási_cím>
+		<kiszállítási_cím>Kuruc József utca 23.</kiszállítási_cím>
 		<összeg>9470</összeg>
 	</rendelés>
 	
@@ -30,19 +30,19 @@
 	<megrendelő MID="1">
 		<visszatérő_vendég>igen</visszatérő_vendég>
 		<telefonszám>0620000001</telefonszám>
-		<név>Első_Elemér</név>
+		<név>Kerekes Ferenc</név>
 	</megrendelő>
 	
 	<megrendelő MID="2">
 		<visszatérő_vendég>nem</visszatérő_vendég>
 		<telefonszám>0620202020</telefonszám>
-		<név>Második_Mária</név>
+		<név>Kiss Sándor</név>
 	</megrendelő>
 	
 	<megrendelő MID="3">
 		<visszatérő_vendég>nem</visszatérő_vendég>
 		<telefonszám>0620987654321</telefonszám>
-		<név>Kis_Pista</név>
+		<név>Kékesi Albert</név>
 	</megrendelő>
 	
 	<!-- fizetések -->
@@ -101,7 +101,7 @@
 	
 	<!-- ételek -->
 	<étel EID="1">
-		<név>Hawaii</név>
+		<név>Hawaii pizza</név>
 		<ár>2250</ár>
 		<allergén>Glutén</allergén>
 		<allergén>Tojás</allergén>
@@ -109,7 +109,7 @@
 	</étel>
 	
 	<étel EID="2">
-		<név>Piedone</név>
+		<név>Piedone pizza</név>
 		<ár>2250</ár>
 		<allergén>Glutén</allergén>
 		<allergén>Tojás</allergén>
@@ -117,14 +117,14 @@
 	</étel>
 	
 	<étel EID="3">
-		<név>Szezámos_csirke_box</név>
+		<név>Szezámos csirke box</név>
 		<ár>2720</ár>
 		<allergén>Szezámmag</allergén>
 		<típus>Húsétel</típus>
 	</étel>
 	
 	<étel EID="4">
-		<név>Gyros_tál</név>
+		<név>Extrasajtos Gyros tál</név>
 		<ár>2720</ár>
 		<allergén>Szezámmag</allergén>
 		<allergén>Glutén</allergén>
@@ -132,7 +132,7 @@
 	</étel>
 	
 	<étel EID="5">
-		<név>Görög_saláta</név>
+		<név>Görög saláta</név>
 		<ár>1670</ár>
 		<allergén></allergén>
 		<típus>Saláta</típus>
