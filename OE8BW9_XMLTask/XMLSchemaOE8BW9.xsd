@@ -12,7 +12,6 @@
 	            </xs:sequence>
 		</xs:complexType>
 
-		
 		<!-- Primary keys -->
 		<xs:key name="rendelésKulcs">
             <xs:selector xpath="rendelés"/>
@@ -140,7 +139,7 @@
 		<xs:attribute name="EID" type="xs:integer" use="required"/>
    	</xs:complexType> 
    	
-   	<xs:complexType name="akcióTipus">
+   	<xs:complexType name="akcióTipus">          <!--pl.s:1015 csak element, name type, alatta új komplex type-->
 		<xs:sequence>
 			<xs:element name="időtartam">
 				<xs:complexType>
