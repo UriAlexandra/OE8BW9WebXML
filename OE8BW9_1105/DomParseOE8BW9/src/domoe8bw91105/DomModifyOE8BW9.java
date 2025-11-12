@@ -27,7 +27,7 @@ public class DomModifyOE8BW9 {
 
             Document doc = docBuilder.parse(inputFile);
 
-            Node hallgatok = doc.getFirstChild();
+            //Node hallgatok = doc.getFirstChild();
 
             Node hallgat = doc.getElementsByTagName("hallgato").item(0);
 
