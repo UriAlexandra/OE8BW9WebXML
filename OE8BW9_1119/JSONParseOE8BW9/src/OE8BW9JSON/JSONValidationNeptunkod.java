@@ -1,9 +1,12 @@
-package OE8BW9_1119.JSONParseOE8BW9.src.OE8BW9JSON;
+package OE8BW9JSON;
 
 import org.everit.json.schema.Schema;
 import org.everit.json.schema.loader.SchemaLoader;
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

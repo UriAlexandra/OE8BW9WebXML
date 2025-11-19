@@ -1,16 +1,17 @@
-package OE8BW9_1119.JSONParseOE8BW9.src.OE8BW9JSON;
+package OE8BW9JSON;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
+import java.io.FileReader;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 public class JSONWriteNeptunkod {
     public static void main(String[] args) {
-        String inputFile = "orarendNeptunkod.json";
-        String outputFile = "orarendNeptunkod1.json";
+        String inputFile = "orarendOE8BW9.json";
+        String outputFile = "orarendOE8BW9.json";
 
         try {
             String content = new String(Files.readAllBytes(Paths.get(inputFile)));

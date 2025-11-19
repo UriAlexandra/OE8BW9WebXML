@@ -1,4 +1,4 @@
-package OE8BW9_1119.JSONParseOE8BW9.src.OE8BW9JSON;
+package OE8BW9JSON;
 
 import java.io.FileReader;
 import org.json.simple.JSONArray;
@@ -8,11 +8,11 @@ import org.json.simple.parser.JSONParser;
 public class JSONReadOE8BW9 {
     public static void main(String[] args) {
 
-        try (FileReader reader = new FileReader("OE8BW9_orarend.json")) {
+        try (FileReader reader = new FileReader("./OE8BW9_1119/JSONParseOE8BW9/orarendOE8BW9.json")) {
             JSONParser json = new JSONParser();
             JSONObject jsonObject = (JSONObject) json.parse(reader);
 
-            JSONObject root = (JSONObject) jsonObject.get("UAN_orarend");
+            JSONObject root = (JSONObject) jsonObject.get("OE8BW9_orarend");
             JSONArray lessons = (JSONArray) root.get("ora");
 
             System.out.println("OE8BW9 Órarend 2025 ősz: \n");
