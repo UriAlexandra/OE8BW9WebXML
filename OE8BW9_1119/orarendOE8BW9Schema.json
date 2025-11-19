@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "OE8BW9_orarend": {
+      "type": "object",
+      "properties": {
+        "ora": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "targy": { "type": "string" },
+              "idopont": {
+                "type": "object",
+                "properties": {
+                  "nap": { "type": "string" },
+                  "tol": { "type": "integer", "minimum": 0 },
+                  "ig": { "type": "integer", "minimum": 0 }
+                },
+                "required": ["nap", "tol", "ig"]
+              },
+              "helyszin": { "type": "string" },
+              "oktato": { "type": "string" },
+              "szak": { "type": "string" }
+            },
+            "required": ["targy", "idopont", "helyszin", "oktato", "szak"]
+          }
+        }
+      },
+      "required": ["ora"]
+    }
+  },
+  "required": ["OE8BW9_orarend"]
+}
