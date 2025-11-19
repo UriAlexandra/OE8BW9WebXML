@@ -64,7 +64,7 @@ document.getElementById("loadBtn").addEventListener("click", function () {
         .then(response => response.json())
         .then(data => {
             const out = document.getElementById("output");
-            out.innerHTML = "";   // törlés
+            out.innerHTML = "";   
 
             const orak = data.OE8BW9_orarend.ora;
 
