@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Neptunkód Órarend</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button {
+            padding: 10px 18px;
+            font-size: 16px;
+            border: 1px solid #000;
+            background: #f5f5f5;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #e0e0e0;
+        }
+
+        .orarend-blokk {
+            padding: 15px 20px;
+            border: 1px solid #999;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            margin: 4px 0;
+            font-size: 15px;
+        }
+
+        .cimke {
+            font-weight: bold;
+            display: inline-block;
+            width: 120px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2>Neptunkód Órarend 2025</h2>
+
+<button id="loadBtn">JSON betöltése</button>
+<div id="output"></div>
+
+<script>
+document.getElementById("loadBtn").addEventListener("click", function () {
+    fetch("orarendOE8BW9.json")
+        .then(response => response.json())
+        .then(data => {
+            const out = document.getElementById("output");
+            out.innerHTML = "";   // törlés
+
+            const orak = data.OE8BW9_orarend.ora;
+
+            orak.forEach(obj => {
+                const block = document.createElement("div");
+                block.className = "orarend-blokk";
+
+                block.innerHTML += `<p><span class="cimke">Tárgy:</span> ${obj.targy}</p>`;
+                block.innerHTML += `<p><span class="cimke">Helyszín:</span> ${obj.helyszin}</p>`;
+                block.innerHTML += `<p><span class="cimke">Oktató:</span> ${obj.oktato}</p>`;
+                block.innerHTML += `<p><span class="cimke">Szak:</span> ${obj.szak}</p>`;
+
+                const ido = obj.idopont;
+                block.innerHTML += `<p><span class="cimke">Időpont:</span> ${
+                    ido.nap + " " + ido.tol + ":00 - " + ido.ig + ":00"
+                }</p>`;
+
+                out.appendChild(block);
+            });
+        })
+        .catch(err => console.error("Hiba:", err));
+});
+</script>
+
+</body>
+</html>
