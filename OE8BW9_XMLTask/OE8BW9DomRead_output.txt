@@ -1,0 +1,220 @@
+Gyökér elem: ételrendelések
+----------------------------------------
+
+Aktuális elem: rendelés
+Rendelés azonosító (RID): 1
+Megrendelő azonosító (MID): 1
+Fizetés azonosító (FID): 1
+Dátum: 2025-01-01
+Kiszállítási cím: Arany János utca 1.
+Összeg: 6750
+
+Aktuális elem: rendelés
+Rendelés azonosító (RID): 2
+Megrendelő azonosító (MID): 2
+Fizetés azonosító (FID): 2
+Dátum: 2025-02-02
+Kiszállítási cím: Irinyi János utca 10.
+Összeg: 6060
+
+Aktuális elem: rendelés
+Rendelés azonosító (RID): 3
+Megrendelő azonosító (MID): 1
+Fizetés azonosító (FID): 3
+Dátum: 2025-10-10
+Kiszállítási cím: Petőfi Séndor utca 1.
+Összeg: 10880
+
+Aktuális elem: rendelés
+Rendelés azonosító (RID): 4
+Megrendelő azonosító (MID): 3
+Fizetés azonosító (FID): 4
+Dátum: 2025-11-04
+Kiszállítási cím: Kuruc József utca 23.
+Összeg: 9470
+
+----------------------------------------
+
+Aktuális elem: megrendelő
+Megrendelő azonosító (MID): 1
+Visszatérő vendég: igen
+Telefonszám: 0620000001
+Név: Kerekes Ferenc
+
+Aktuális elem: megrendelő
+Megrendelő azonosító (MID): 2
+Visszatérő vendég: nem
+Telefonszám: 0620202020
+Név: Kiss Sándor
+
+Aktuális elem: megrendelő
+Megrendelő azonosító (MID): 3
+Visszatérő vendég: nem
+Telefonszám: 0620987654321
+Név: Kékesi Albert
+
+----------------------------------------
+
+Aktuális elem: fizetés
+Fizetés azonosító (FID): 1
+Átvitel ideje: 2025-01-01
+Kupon: nem
+Fizetés módja: készpénz
+
+Aktuális elem: fizetés
+Fizetés azonosító (FID): 2
+Átvitel ideje: 2025-02-09
+Kupon: igen
+Fizetés módja: bankkártya
+
+Aktuális elem: fizetés
+Fizetés azonosító (FID): 3
+Átvitel ideje: 2025-10-11
+Kupon: igen
+Fizetés módja: készpénz
+
+Aktuális elem: fizetés
+Fizetés azonosító (FID): 4
+Átvitel ideje: 2025-11-07
+Kupon: nem
+Fizetés módja: szép-kártya
+
+----------------------------------------
+
+Aktuális elem: rendelt
+Rendelés azonosító (RID): 1
+Étel azonosító (EID): 1
+Mennyiség: 2
+Tétel ár: 2250
+Megjegyzés: extra sajt
+
+Aktuális elem: rendelt
+Rendelés azonosító (RID): 1
+Étel azonosító (EID): 6
+Mennyiség: 1
+Tétel ár: 2550
+Megjegyzés: gluténmentes tészta
+
+Aktuális elem: rendelt
+Rendelés azonosító (RID): 2
+Étel azonosító (EID): 3
+Mennyiség: 1
+Tétel ár: 2720
+Megjegyzés: normál adag
+
+Aktuális elem: rendelt
+Rendelés azonosító (RID): 2
+Étel azonosító (EID): 5
+Mennyiség: 2
+Tétel ár: 1670
+Megjegyzés: öntet nélkül
+
+Aktuális elem: rendelt
+Rendelés azonosító (RID): 3
+Étel azonosító (EID): 4
+Mennyiség: 4
+Tétel ár: 2720
+Megjegyzés: extra sajt
+
+Aktuális elem: rendelt
+Rendelés azonosító (RID): 4
+Étel azonosító (EID): 2
+Mennyiség: 3
+Tétel ár: 2250
+Megjegyzés: csípős
+
+Aktuális elem: rendelt
+Rendelés azonosító (RID): 4
+Étel azonosító (EID): 3
+Mennyiség: 1
+Tétel ár: 2720
+Megjegyzés: extra szezámmag
+
+----------------------------------------
+
+Aktuális elem: étel
+Étel azonosító (EID): 1
+Név: Hawaii pizza
+Ár: 2250
+Allergén: Glutén
+Allergén: Tojás
+Típus: Pizza
+
+Aktuális elem: étel
+Étel azonosító (EID): 2
+Név: Piedone pizza
+Ár: 2250
+Allergén: Glutén
+Allergén: Tojás
+Típus: Pizza
+
+Aktuális elem: étel
+Étel azonosító (EID): 3
+Név: Szezámos csirke box
+Ár: 2720
+Allergén: Szezámmag
+Típus: Húsétel
+
+Aktuális elem: étel
+Étel azonosító (EID): 4
+Név: Extrasajtos Gyros tál
+Ár: 2720
+Allergén: Szezámmag
+Allergén: Glutén
+Típus: Húsétel
+
+Aktuális elem: étel
+Étel azonosító (EID): 5
+Név: Görög saláta
+Ár: 1670
+Allergén: 
+Típus: Saláta
+
+Aktuális elem: étel
+Étel azonosító (EID): 6
+Név: 4sajtos
+Ár: 2550
+Allergén: Glutén
+Allergén: Tojás
+Típus: Pizza
+
+----------------------------------------
+
+Aktuális elem: akció
+Akció azonosító (AID): 1
+Étel azonosító (EID): 1
+Kezdete: 2025-01-01
+Vége: 2025-02-01
+Leárazás: 10%
+
+Aktuális elem: akció
+Akció azonosító (AID): 2
+Étel azonosító (EID): 1
+Kezdete: 2025-06-01
+Vége: 2025-09-01
+Leárazás: 10%
+
+Aktuális elem: akció
+Akció azonosító (AID): 3
+Étel azonosító (EID): 2
+Kezdete: 2025-10-31
+Vége: 2025-11-30
+Leárazás: 50%
+
+Aktuális elem: akció
+Akció azonosító (AID): 4
+Étel azonosító (EID): 6
+Kezdete: 2025-04-15
+Vége: 2025-05-15
+Leárazás: 15%
+
+Aktuális elem: akció
+Akció azonosító (AID): 5
+Étel azonosító (EID): 6
+Kezdete: 2025-09-01
+Vége: 2025-11-30
+Leárazás: 30%
+
+----------------------------------------
+
+--- Mentve fájlba: OE8BW9DomRead_output.txt ---

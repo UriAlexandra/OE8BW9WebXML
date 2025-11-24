@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ételrendelések xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaOE8BW9.xsd">
+    	
+    <!-- rendelések -->
+    	
+    <rendelés FID="1" MID="1" RID="1">
+        		
+        <dátum>2025-01-01</dátum>
+        		
+        <kiszállítási_cím>Arany János utca 1.</kiszállítási_cím>
+        		
+        <összeg>6750</összeg>
+        	
+    </rendelés>
+    	
+	
+    <rendelés FID="2" MID="2" RID="2">
+        		
+        <dátum>2025-02-02</dátum>
+        		
+        <kiszállítási_cím>Irinyi János utca 10.</kiszállítási_cím>
+        		
+        <összeg>6060</összeg>
+        	
+    </rendelés>
+    	
+	
+    <rendelés FID="3" MID="1" RID="3">
+        		
+        <dátum>2025-10-10</dátum>
+        		
+        <kiszállítási_cím>Petőfi Séndor utca 1.</kiszállítási_cím>
+        		
+        <összeg>10880</összeg>
+        	
+    </rendelés>
+    	
+	
+    <rendelés FID="4" MID="3" RID="4">
+        		
+        <dátum>2025-11-04</dátum>
+        		
+        <kiszállítási_cím>Kuruc József utca 23.</kiszállítási_cím>
+        		
+        <összeg>9470</összeg>
+        	
+    </rendelés>
+    	
+	
+    <!-- megrendelők -->
+    	
+    <megrendelő MID="1">
+        		
+        <visszatérő_vendég>igen</visszatérő_vendég>
+        		
+        <telefonszám>0620000001</telefonszám>
+        		
+        <név>Kerekes Ferenc</név>
+        	
+    </megrendelő>
+    	
+	
+    <megrendelő MID="2">
+        		
+        <visszatérő_vendég>nem</visszatérő_vendég>
+        		
+        <telefonszám>0620202020</telefonszám>
+        		
+        <név>Kiss Sándor</név>
+        	
+    </megrendelő>
+    	
+	
+    <megrendelő MID="3">
+        		
+        <visszatérő_vendég>igen</visszatérő_vendég>
+        		
+        <telefonszám>0620987654321</telefonszám>
+        		
+        <név>Kékesi Albert</név>
+        	
+    </megrendelő>
+    	
+	
+    <!-- fizetések -->
+    	
+    <fizetés FID="1">
+        		
+        <átvitel_ideje>2025-01-01</átvitel_ideje>
+        		
+        <kupon>nem</kupon>
+        		
+        <fizetés_módja>készpénz</fizetés_módja>
+        	
+    </fizetés>
+    	
+	
+    <fizetés FID="2">
+        		
+        <átvitel_ideje>2025-02-09</átvitel_ideje>
+        		
+        <kupon>igen</kupon>
+        		
+        <fizetés_módja>bankkártya</fizetés_módja>
+        	
+    </fizetés>
+    	
+	
+    <fizetés FID="3">
+        		
+        <átvitel_ideje>2025-10-11</átvitel_ideje>
+        		
+        <kupon>igen</kupon>
+        		
+        <fizetés_módja>készpénz</fizetés_módja>
+        	
+    </fizetés>
+    	
+	
+    <fizetés FID="4">
+        		
+        <átvitel_ideje>2025-11-07</átvitel_ideje>
+        		
+        <kupon>nem</kupon>
+        		
+        <fizetés_módja>bankkártya</fizetés_módja>
+        	
+    </fizetés>
+    	
+		
+    <!-- megrendelt ételek kapcsoló -->
+    	
+    <rendelt EID="1" RID="1">
+        		
+        <mennyiség>2</mennyiség>
+        		
+        <tétel_ár>2250</tétel_ár>
+        		
+        <megjegyzés>extra sajt</megjegyzés>
+        	
+    </rendelt>
+    	
+	
+    <rendelt EID="6" RID="1">
+        		
+        <mennyiség>1</mennyiség>
+        		
+        <tétel_ár>2550</tétel_ár>
+        		
+        <megjegyzés>gluténmentes tészta</megjegyzés>
+        	
+        <megjegyzés>saját kérés</megjegyzés>
+    </rendelt>
+    	
+	
+    <rendelt EID="3" RID="2">
+        		
+        <mennyiség>1</mennyiség>
+        		
+        <tétel_ár>2720</tétel_ár>
+        		
+        <megjegyzés>normál adag</megjegyzés>
+        	
+    </rendelt>
+    	
+	
+    <rendelt EID="5" RID="2">
+        		
+        <mennyiség>2</mennyiség>
+        		
+        <tétel_ár>1670</tétel_ár>
+        		
+        <megjegyzés>öntet nélkül</megjegyzés>
+        	
+    </rendelt>
+    	
+	
+    <rendelt EID="4" RID="3">
+        		
+        <mennyiség>4</mennyiség>
+        		
+        <tétel_ár>2720</tétel_ár>
+        		
+        <megjegyzés>extra sajt</megjegyzés>
+        	
+    </rendelt>
+    	
+	
+    <rendelt EID="2" RID="4">
+        		
+        <mennyiség>3</mennyiség>
+        		
+        <tétel_ár>2250</tétel_ár>
+        		
+        <megjegyzés>csípős</megjegyzés>
+        	
+    </rendelt>
+    	
+	
+    <rendelt EID="3" RID="4">
+        		
+        <mennyiség>1</mennyiség>
+        		
+        <tétel_ár>2720</tétel_ár>
+        		
+        <megjegyzés>extra szezámmag</megjegyzés>
+        	
+    </rendelt>
+    	
+	
+    <!-- ételek -->
+    	
+    <étel EID="1">
+        		
+        <név>Hawaii pizza</név>
+        		
+        <ár>2750</ár>
+        		
+        <allergén>Glutén</allergén>
+        		
+        <allergén>Tojás</allergén>
+        		
+        <típus>Pizza</típus>
+        	
+    </étel>
+    	
+	
+    <étel EID="2">
+        		
+        <név>Piedone pizza</név>
+        		
+        <ár>2250</ár>
+        		
+        <allergén>Glutén</allergén>
+        		
+        <allergén>Tojás</allergén>
+        		
+        <típus>Pizza</típus>
+        	
+    </étel>
+    	
+	
+    <étel EID="3">
+        		
+        <név>Szezámos csirke box</név>
+        		
+        <ár>2720</ár>
+        		
+        <allergén>Szezámmag</allergén>
+        		
+        <típus>Húsétel</típus>
+        	
+    </étel>
+    	
+	
+    <étel EID="4">
+        		
+        <név>Extrasajtos Gyros tál</név>
+        		
+        <ár>2720</ár>
+        		
+        <allergén>Szezámmag</allergén>
+        		
+        <allergén>Glutén</allergén>
+        		
+        <típus>Húsétel</típus>
+        	
+    </étel>
+    	
+	
+    <étel EID="5">
+        		
+        <név>Görög saláta</név>
+        		
+        <ár>1670</ár>
+        		
+        <allergén/>
+        		
+        <típus>Saláta</típus>
+        	
+    </étel>
+    	
+	
+    <étel EID="6">
+        		
+        <név>4sajtos</név>
+        		
+        <ár>2550</ár>
+        		
+        <allergén>Glutén</allergén>
+        		
+        <allergén>Tojás</allergén>
+        		
+        <típus>Pizza</típus>
+        	
+    </étel>
+    	
+	
+    <!-- akciók -->
+    	
+    <akció AID="1" EID="1">
+        		
+        <időtartam>
+            			
+            <kezdete>2025-01-01</kezdete>
+            			
+            <vége>2025-02-01</vége>
+            		
+        </időtartam>
+        		
+        <leárazás>10</leárazás>
+        	
+    </akció>
+    	
+	
+    <akció AID="2" EID="1">
+        		
+        <időtartam>
+            			
+            <kezdete>2025-06-01</kezdete>
+            			
+            <vége>2025-09-01</vége>
+            		
+        </időtartam>
+        		
+        <leárazás>10</leárazás>
+        	
+    </akció>
+    	
+	
+    <akció AID="3" EID="2">
+        		
+        <időtartam>
+            			
+            <kezdete>2025-10-31</kezdete>
+            			
+            <vége>2025-11-30</vége>
+            		
+        </időtartam>
+        		
+        <leárazás>50</leárazás>
+        	
+    </akció>
+    	
+	
+    <akció AID="4" EID="6">
+        		
+        <időtartam>
+            			
+            <kezdete>2025-04-15</kezdete>
+            			
+            <vége>2025-05-15</vége>
+            		
+        </időtartam>
+        		
+        <leárazás>15</leárazás>
+        	
+    </akció>
+    	
+	
+    <akció AID="5" EID="6">
+        		
+        <időtartam>
+            			
+            <kezdete>2025-09-01</kezdete>
+            			
+            <vége>2025-11-30</vége>
+            		
+        </időtartam>
+        		
+        <leárazás>30</leárazás>
+        	
+    </akció>
+    
+</ételrendelések>
