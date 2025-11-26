@@ -11,7 +11,7 @@
         <title>Hallgatók adatai</title>
       </head>
       <body>
-        <h2>Hallgatók adatai (HTML generálás)</h2>
+        <h2>Hallgatók adatai</h2>
 
         <table border="1" cellpadding="5">
           <tr>

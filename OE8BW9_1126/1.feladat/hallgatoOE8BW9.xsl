@@ -11,7 +11,7 @@
         <meta charset="UTF-8" />
       </head>
       <body>
-        <h2>Hallgatók adatai - for-each, value-of</h2>
+        <h2>Hallgatók adatai</h2>
 
         <table border="1" cellpadding="5">
           <tr bgcolor="#90EE90">
