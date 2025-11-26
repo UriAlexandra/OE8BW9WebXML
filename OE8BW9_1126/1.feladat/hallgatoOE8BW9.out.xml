@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:output method="xml" indent="yes" />
+
+  <xsl:template match="/">
+    <tablazat>
+
+      <xsl:for-each select="class/student">
+        <sor>
+          <id><xsl:value-of select="@id"/></id>
+          <keresztnev><xsl:value-of select="keresztnev"/></keresztnev>
+          <vezeteknev><xsl:value-of select="vezeteknev"/></vezeteknev>
+          <becenev><xsl:value-of select="becenev"/></becenev>
+          <kor><xsl:value-of select="kor"/></kor>
+          <osztondij><xsl:value-of select="osztondij"/></osztondij>
+        </sor>
+      </xsl:for-each>
+
+    </tablazat>
+  </xsl:template>
+
+</xsl:stylesheet>

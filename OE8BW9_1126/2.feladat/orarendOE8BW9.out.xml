@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:output method="xml" indent="yes"/>
+
+  <xsl:template match="/">
+    <orarend_out>
+
+      <xsl:for-each select="UAN_orarend/ora">
+        <ora>
+          <id><xsl:value-of select="@id"/></id>
+          <tipus><xsl:value-of select="@tipus"/></tipus>
+          <tantargy><xsl:value-of select="tantargy"/></tantargy>
+          <nap><xsl:value-of select="idopont/nap"/></nap>
+          <tol><xsl:value-of select="idopont/tol"/></tol>
+          <ig><xsl:value-of select="idopont/ig"/></ig>
+          <helyszin><xsl:value-of select="helyszín"/></helyszin>
+          <oktato><xsl:value-of select="oktato"/></oktato>
+          <szak><xsl:value-of select="szak"/></szak>
+        </ora>
+      </xsl:for-each>
+
+    </orarend_out>
+  </xsl:template>
+
+</xsl:stylesheet>

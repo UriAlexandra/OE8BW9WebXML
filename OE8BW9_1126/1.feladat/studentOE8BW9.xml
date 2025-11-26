@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="hallgatoOE8BW9.xsl"?>
+
+<class>
+    <student id="01">
+        <keresztnev>Anna</keresztnev>
+        <vezeteknev>Kovács</vezeteknev>
+        <becenev>Ancsa</becenev>
+        <kor>20</kor>
+        <osztondij>600000</osztondij>
+    </student>
+
+    <student id="02">
+        <keresztnev>Péter</keresztnev>
+        <vezeteknev>Nagy</vezeteknev>
+        <becenev>Peti</becenev>
+        <kor>22</kor>
+        <osztondij>520000</osztondij>
+    </student>
+
+    <student id="03">
+        <keresztnev>Eszter</keresztnev>
+        <vezeteknev>Tóth</vezeteknev>
+        <becenev>Eszti</becenev>
+        <kor>21</kor>
+        <osztondij>450000</osztondij>
+    </student>
+    
+</class>
