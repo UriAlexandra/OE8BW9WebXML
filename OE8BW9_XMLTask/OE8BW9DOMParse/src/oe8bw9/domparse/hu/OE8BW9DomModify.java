@@ -11,6 +11,8 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.*;
 
+//Célzott XML-módosítás: ár növelés, megjegyzés hozzáadás, státusz és fizetés mód átírása, majd az új XML fájlba mentése.
+
 public class OE8BW9DomModify {
 
     public static void main(String[] argv) {

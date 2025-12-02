@@ -17,6 +17,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+//XML-ből szűrés, lista, számlálás és ID-alapú összekapcsolás (JOIN) műveletek.
+
 public class OE8BW9DomQuery {
 
     public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException {

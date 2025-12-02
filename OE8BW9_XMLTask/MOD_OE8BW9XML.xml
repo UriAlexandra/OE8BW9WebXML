@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Gyökérelem: az egész adatbázisszerű XML-t tartalmazza --><ételrendelések xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaOE8BW9.xsd">
+<!-- Gyökérelem --><ételrendelések xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaOE8BW9.xsd">
     	
     <!-- =======================
 	     RENDELÉSEK
@@ -9,15 +9,9 @@
     	
     <rendelés FID="1" MID="1" RID="1">
         		
-        <!-- Rendelés dátuma -->
-        		
         <dátum>2025-01-01</dátum>
         		
-        <!-- Hová szállítják ki -->
-        		
         <kiszállítási_cím>Arany János utca 1.</kiszállítási_cím>
-        		
-        <!-- Rendelés végösszege -->
         		
         <összeg>6750</összeg>
         	
@@ -25,6 +19,8 @@
     	
 	
     <rendelés FID="2" MID="2" RID="2">
+          
+        <!-- rendelésekkel 1:N kapcsolatban van -->
         		
         <dátum>2025-02-02</dátum>
         		
@@ -66,15 +62,9 @@
     	
     <megrendelő MID="1">
         		
-        <!-- Visszatérő vendég-e -->
-        		
         <visszatérő_vendég>igen</visszatérő_vendég>
         		
-        <!-- Telefonszám -->
-        		
         <telefonszám>0620000001</telefonszám>
-        		
-        <!-- Megrendelő neve -->
         		
         <név>Kerekes Ferenc</név>
         	
@@ -112,15 +102,11 @@
     	
     <fizetés FID="1">
         		
-        <!-- Mikor történt az átadás/fizetés -->
-        		
         <átvitel_ideje>2025-01-01</átvitel_ideje>
         		
-        <!-- Használtak-e kupont -->
+        <!-- XSD-ben ez 1:1 kapcsolat a rendeléshez-->
         		
         <kupon>nem</kupon>
-        		
-        <!-- Fizetési mód -->
         		
         <fizetés_módja>készpénz</fizetés_módja>
         	
@@ -169,15 +155,11 @@
     	
     <rendelt EID="1" RID="1">
         		
-        <!-- Hány darabot rendeltek -->
+        <!-- N:N kapcsolatot old fel: rendelés ↔ étel -->
         		
         <mennyiség>2</mennyiség>
         		
-        <!-- Egy tétel ára -->
-        		
         <tétel_ár>2250</tétel_ár>
-        		
-        <!-- Extra megjegyzés -->
         		
         <megjegyzés>extra sajt</megjegyzés>
         	
@@ -261,6 +243,8 @@
     <étel EID="1">
         		
         <név>Hawaii pizza</név>
+         	
+        <!--akciók és rendelt tételek is erre hivatkoznak-->
         		
         <ár>2750</ár>
         		
@@ -357,17 +341,15 @@
     	
     <akció AID="1" EID="1">
         		
-        <!-- Időtartam blokk -->
-        		
         <időtartam>
             			
             <kezdete>2025-01-01</kezdete>
+            		
+            <!--Egy ételnek több akciója lehet → 1:N kapcsolat-->
             			
             <vége>2025-02-01</vége>
             		
         </időtartam>
-        		
-        <!-- Kedvezmény százalékban -->
         		
         <leárazás>10</leárazás>
         	
