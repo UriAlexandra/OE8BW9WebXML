@@ -8,15 +8,12 @@
 	     ======================= -->
 	<!-- Egy rendelés adatai; RID = rendelés azonosító, MID = megrendelő azonosító, FID = fizetés azonosító -->
 	<rendelés RID="1" MID="1" FID="1">
-		<!-- Rendelés dátuma -->
 		<dátum>2025-01-01</dátum>
-		<!-- Hová szállítják ki -->
 		<kiszállítási_cím>Arany János utca 1.</kiszállítási_cím>
-		<!-- Rendelés végösszege -->
 		<összeg>6750</összeg>
 	</rendelés>
 	
-	<rendelés RID="2" MID="2" FID="2">
+	<rendelés RID="2" MID="2" FID="2">  <!-- rendelésekkel 1:N kapcsolatban van -->
 		<dátum>2025-02-02</dátum>
 		<kiszállítási_cím>Irinyi János utca 10.</kiszállítási_cím>
 		<összeg>6060</összeg>
@@ -63,11 +60,8 @@
 	     ======================= -->
 	<!-- FID = fizetés azonosító -->
 	<fizetés FID="1">
-		<!-- Mikor történt az átadás/fizetés -->
-		<átvitel_ideje>2025-01-01</átvitel_ideje>
-		<!-- Használtak-e kupont -->
+		<átvitel_ideje>2025-01-01</átvitel_ideje>		<!-- XSD-ben ez 1:1 kapcsolat a rendeléshez-->
 		<kupon>nem</kupon>
-		<!-- Fizetési mód -->
 		<fizetés_módja>készpénz</fizetés_módja>
 	</fizetés>
 	
@@ -94,7 +88,7 @@
 	     RENDELT TÉTELEK
 	     ======================= -->
 	<!-- Kapcsolótábla rendelés és étel között: RID + EID -->
-	<rendelt RID="1" EID="1">
+	<rendelt RID="1" EID="1">		<!-- N:N kapcsolatot old fel: rendelés ↔ étel -->
 		<mennyiség>2</mennyiség>
 		<tétel_ár>2250</tétel_ár>
 		<megjegyzés>extra sajt</megjegyzés>
@@ -142,7 +136,7 @@
 	     ======================= -->
 	<!-- EID = étel azonosító -->
 	<étel EID="1">
-		<név>Hawaii pizza</név>
+		<név>Hawaii pizza</név> 	<!--akciók és rendelt tételek is erre hivatkoznak-->
 		<ár>2250</ár>
 		<!-- Több allergén elem is lehet -->
 		<allergén>Glutén</allergén>
@@ -195,12 +189,10 @@
 	     ======================= -->
 	<!-- AID = akció azonosító, EID = érintett étel -->
 	<akció AID="1" EID="1">
-		<!-- Időtartam blokk -->
 		<időtartam>
-			<kezdete>2025-01-01</kezdete>
+			<kezdete>2025-01-01</kezdete>		<!--Egy ételnek több akciója lehet → 1:N kapcsolat-->
 			<vége>2025-02-01</vége>
 		</időtartam>
-		<!-- Kedvezmény százalékban -->
 		<leárazás>10</leárazás>
 	</akció>
 	
