@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- Gyökérelem: az egész adatbázisszerű XML-t tartalmazza -->
 <ételrendelések xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaOE8BW9.xsd">
-	<!-- rendelések -->
+
+	<!-- =======================
+	     RENDELÉSEK
+	     ======================= -->
+	<!-- Egy rendelés adatai; RID = rendelés azonosító, MID = megrendelő azonosító, FID = fizetés azonosító -->
 	<rendelés RID="1" MID="1" FID="1">
+		<!-- Rendelés dátuma -->
 		<dátum>2025-01-01</dátum>
+		<!-- Hová szállítják ki -->
 		<kiszállítási_cím>Arany János utca 1.</kiszállítási_cím>
+		<!-- Rendelés végösszege -->
 		<összeg>6750</összeg>
 	</rendelés>
 	
@@ -26,10 +34,17 @@
 		<összeg>9470</összeg>
 	</rendelés>
 	
-	<!-- megrendelők -->
+	
+	<!-- =======================
+	     MEGRENDELŐK
+	     ======================= -->
+	<!-- MID = megrendelő azonosító -->
 	<megrendelő MID="1">
+		<!-- Visszatérő vendég-e -->
 		<visszatérő_vendég>igen</visszatérő_vendég>
+		<!-- Telefonszám -->
 		<telefonszám>0620000001</telefonszám>
+		<!-- Megrendelő neve -->
 		<név>Kerekes Ferenc</név>
 	</megrendelő>
 	
@@ -45,10 +60,17 @@
 		<név>Kékesi Albert</név>
 	</megrendelő>
 	
-	<!-- fizetések -->
+	
+	<!-- =======================
+	     FIZETÉSEK
+	     ======================= -->
+	<!-- FID = fizetés azonosító -->
 	<fizetés FID="1">
+		<!-- Mikor történt az átadás/fizetés -->
 		<átvitel_ideje>2025-01-01</átvitel_ideje>
+		<!-- Használtak-e kupont -->
 		<kupon>nem</kupon>
+		<!-- Fizetési mód -->
 		<fizetés_módja>készpénz</fizetés_módja>
 	</fizetés>
 	
@@ -70,10 +92,17 @@
 		<fizetés_módja>szép-kártya</fizetés_módja>
 	</fizetés>
 	
-		<!-- megrendelt ételek kapcsoló -->
+	
+	<!-- =======================
+	     RENDELT TÉTELEK
+	     ======================= -->
+	<!-- Kapcsolótábla rendelés és étel között: RID + EID -->
 	<rendelt RID="1" EID="1">
+		<!-- Hány darabot rendeltek -->
 		<mennyiség>2</mennyiség>
+		<!-- Egy tétel ára -->
 		<tétel_ár>2250</tétel_ár>
+		<!-- Extra megjegyzés -->
 		<megjegyzés>extra sajt</megjegyzés>
 	</rendelt>
 	
@@ -112,12 +141,16 @@
 		<tétel_ár>2720</tétel_ár>
 		<megjegyzés>extra szezámmag</megjegyzés>
 	</rendelt>
-
 	
-	<!-- ételek -->
+	
+	<!-- =======================
+	     ÉTELEK LISTÁJA
+	     ======================= -->
+	<!-- EID = étel azonosító -->
 	<étel EID="1">
 		<név>Hawaii pizza</név>
 		<ár>2250</ár>
+		<!-- Több allergén elem is lehet -->
 		<allergén>Glutén</allergén>
 		<allergén>Tojás</allergén>
 		<típus>Pizza</típus>
@@ -149,6 +182,7 @@
 	<étel EID="5">
 		<név>Görög saláta</név>
 		<ár>1670</ár>
+		<!-- Allergén üres esetben nincs feltüntetett allergén -->
 		<allergén></allergén>
 		<típus>Saláta</típus>
 	</étel>
@@ -161,12 +195,18 @@
 		<típus>Pizza</típus>
 	</étel>
 	
-	<!-- akciók -->
+	
+	<!-- =======================
+	     AKCIÓK
+	     ======================= -->
+	<!-- AID = akció azonosító, EID = érintett étel -->
 	<akció AID="1" EID="1">
+		<!-- Időtartam blokk -->
 		<időtartam>
 			<kezdete>2025-01-01</kezdete>
 			<vége>2025-02-01</vége>
 		</időtartam>
+		<!-- Kedvezmény százalékban -->
 		<leárazás>10</leárazás>
 	</akció>
 	
@@ -201,4 +241,5 @@
 		</időtartam>
 		<leárazás>30</leárazás>
 	</akció>
+
 </ételrendelések>

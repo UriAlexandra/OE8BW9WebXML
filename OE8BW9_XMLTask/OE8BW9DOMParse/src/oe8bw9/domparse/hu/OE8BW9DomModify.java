@@ -15,6 +15,7 @@ public class OE8BW9DomModify {
 
     public static void main(String[] argv) {
         try {
+            // XML fájl betöltése
             File inputFile = new File("OE8BW9_XML.xml");
 
             DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
@@ -24,45 +25,79 @@ public class OE8BW9DomModify {
 
             System.out.println("Győkérelem: " + doc.getDocumentElement().getNodeName() + "\n");
 
-            // 1) Étel (EID=1 - Hawaii pizza): ár frissítése (növelése 500 Ft-tal)
+            // ============================================================
+            // 1) Étel (EID = 1) árának módosítása +500 Ft-tal
+            // ============================================================
             title("1) Étel módosítása (EID=1 → ár + 500 Ft)");
+
+            // Keresés attribútum alapján
             Element etel1 = byAttr(doc, "étel", "EID", "1");
             if (etel1 != null) {
+                // Jelenlegi ár lekérése
                 int currentPrice = parseInt(getText(etel1, "ár"), 0);
                 int newPrice = currentPrice + 500;
+
+                // Új ár beállítása
                 setText(etel1, "ár", String.valueOf(newPrice));
+
+                // Ellenőrző kiírás
                 printEtel(etel1);
             } else
                 System.out.println("Nincs EID=1 étel.\n");
 
-            // 2) Rendelt tétel (RID=1, EID=6): új megjegyzés hozzáadása, ha hiányzik
+
+            // ============================================================
+            // 2) Rendelt tétel (RID=1, EID=6): megjegyzés hozzáadása
+            // ============================================================
             title("2) Rendelt tétel módosítása (RID=1, EID=6 → megjegyzés hozzáadása)");
-            // Az XML-ben a megjegyzés a 'rendelt' elemen belül van.
+
+            // Végigmegyünk minden 'rendelt' elemen
             NodeList rendeltItems = doc.getElementsByTagName("rendelt");
             for (int i = 0; i < rendeltItems.getLength(); i++) {
                 Element e = (Element) rendeltItems.item(i);
+
+                // Megfelelő RID és EID keresése
                 if ("1".equals(e.getAttribute("RID")) && "6".equals(e.getAttribute("EID"))) {
-                    // Hozzáadjuk a "saját kérés" megjegyzést, ha még nincs
+
+                    // Ha nincs megjegyzés elem adott tartalommal, hozzáadjuk
                     addChildIfMissingWithText(doc, e, "megjegyzés", "saját kérés");
+
+                    // Ellenőrző kiírás
                     printRendelt(e);
                     break;
                 }
             }
 
-            // 3) Fizetés (FID=4): fizetés módjának átírása "szép-kártyáról" "bankkártyára"
+
+            // ============================================================
+            // 3) Fizetés (FID=4): fizetési mód módosítása
+            // ============================================================
             title("3) Fizetés módosítása (FID=4 → fizetés_módja bankkártyára)");
+
             Element fizetes4 = byAttr(doc, "fizetés", "FID", "4");
             if (fizetes4 != null) {
+
+                // Fizetés módjának átállítása
                 setText(fizetes4, "fizetés_módja", "bankkártya");
+
+                // Ellenőrző kiírás
                 printFizetes(fizetes4);
             } else
                 System.out.println("Nincs FID=4 fizetés.\n");
-            
-            // 4) Megrendelő (MID=3): visszatérő_vendég státusz "igen"-re állítása, ha "nem"
+
+
+            // ============================================================
+            // 4) Megrendelő (MID=3): visszatérő vendég státusz átállítása
+            // ============================================================
             title("4) Megrendelő módosítása (MID=3 → visszatérő_vendég: igen)");
+
             Element megrendelo3 = byAttr(doc, "megrendelő", "MID", "3");
             if (megrendelo3 != null) {
+
+                // Aktuális státusz lekérése
                 String status = getText(megrendelo3, "visszatérő_vendég");
+
+                // Ha még "nem", akkor átírjuk "igen"-re
                 if ("nem".equals(status)) {
                    setText(megrendelo3, "visszatérő_vendég", "igen");
                    printMegrendelo(megrendelo3);
@@ -72,10 +107,11 @@ public class OE8BW9DomModify {
             } else
                 System.out.println("Nincs MID=3 megrendelő.\n");
 
+
             System.out.println("=== Kész ===");
             
-            // Mentés új fájlba
-            saveXml(doc, "MOD_NeptunkodXML.xml");
+            // Módosított XML mentése
+            saveXml(doc, "MOD_OE8BW9XML.xml");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -83,27 +119,35 @@ public class OE8BW9DomModify {
     }
     
     // --------------------------------------------------
-    // ---------- Segédfüggvények ----------
+    // Segédfüggvények
     // --------------------------------------------------
-    
-    // ---------- Blokkfejlécek ----------
+
+    // Blokkfejlécek formázott kiírása
     private static void title(String t) {
         System.out.println("-------------- " + t + " --------------");
     }
     
+    // XML dokumentum mentése
     private static void saveXml(Document doc, String filename) throws Exception {
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
+
+        // Szépen formázott mentés
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+
         DOMSource source = new DOMSource(doc);
         StreamResult result = new StreamResult(new File(filename));
+
         transformer.transform(source, result);
+
         System.out.println("\nMentve: " + filename);
     }
 
-    // ---------- Teljes egyedek kiírása (ellenőrzéshez) ----------
-    
+    // --------------------------------------------------
+    // Ellenőrző kiíró függvények
+    // --------------------------------------------------
+
     private static void printEtel(Element etel) {
         System.out.println("étel [EID=" + etel.getAttribute("EID") + "]");
         System.out.println("  név: " + getText(etel, "név"));
@@ -112,7 +156,8 @@ public class OE8BW9DomModify {
     }
     
     private static void printRendelt(Element rendelt) {
-        System.out.println("rendelt [RID=" + rendelt.getAttribute("RID") + ", EID=" + rendelt.getAttribute("EID") + "]");
+        System.out.println("rendelt [RID=" + rendelt.getAttribute("RID")
+                + ", EID=" + rendelt.getAttribute("EID") + "]");
         System.out.println("  mennyiség: " + getText(rendelt, "mennyiség"));
         System.out.println("  megjegyzés: " + getText(rendelt, "megjegyzés"));
         System.out.println();
@@ -130,10 +175,11 @@ public class OE8BW9DomModify {
         System.out.println();
     }
 
+    // --------------------------------------------------
+    // DOM műveletek
+    // --------------------------------------------------
 
-    // ---------- DOM manipulációs segédfüggvények (mintából adaptálva) ----------
-
-    /** Megkeres egy elemet adott attribútum név és érték alapján. */
+    // Elem keresése attribútum alapján
     private static Element byAttr(Document doc, String tag, String attr, String val) {
         NodeList nl = doc.getElementsByTagName(tag);
         for (int i = 0; i < nl.getLength(); i++) {
@@ -147,38 +193,46 @@ public class OE8BW9DomModify {
         return null;
     }
 
-    /** Egy adott nevű gyermekelem szöveges tartalmát adja vissza. */
+    // Gyermekelem szövegének lekérése
     private static String getText(Element parent, String tag) {
         NodeList nl = parent.getElementsByTagName(tag);
-        return (nl.getLength() > 0 && nl.item(0).getTextContent() != null) ? nl.item(0).getTextContent().trim() : "";
+        return (nl.getLength() > 0 && nl.item(0).getTextContent() != null)
+                ? nl.item(0).getTextContent().trim()
+                : "";
     }
 
-    /** Egy gyermekelem szöveges tartalmát állítja be/módosítja. */
+    // Gyermekelem szövegének módosítása / létrehozása
     private static void setText(Element parent, String tag, String value) {
         NodeList nl = parent.getElementsByTagName(tag);
+
         if (nl.getLength() == 0) {
-            // Ha a gyermekelem nem létezik, létrehozzuk
+            // Ha elem nem létezik → létrehozzuk
             Element child = parent.getOwnerDocument().createElement(tag);
             child.setTextContent(value);
             parent.appendChild(child);
         } else {
+            // Ha létezik → átírjuk
             nl.item(0).setTextContent(value);
         }
     }
 
-    /** Hozzáad egy gyermekelemet adott szöveggel, csak ha még nem létezik az adott tartalommal. */
+    // Olyan gyermekelem hozzáadása, ami még nincs meg ilyen tartalommal
     private static void addChildIfMissingWithText(Document doc, Element parent, String tag, String text) {
         NodeList nl = parent.getElementsByTagName(tag);
+
+        // Ha már létezik ugyanolyan tartalom, nem teszünk hozzá semmit
         for (int i = 0; i < nl.getLength(); i++) {
             if (text.equalsIgnoreCase(nl.item(i).getTextContent().trim()))
-                return; // már van ilyen tartalmú elem
+                return;
         }
+
+        // Létrehozunk egy új elemet
         Element child = doc.createElement(tag);
         child.setTextContent(text);
         parent.appendChild(child);
     }
 
-    /** Stringből int konvertálás segítő. */
+    // Biztonságos String → int átalakító
     private static int parseInt(String s, int def) {
         try {
             return Integer.parseInt(s.trim());
