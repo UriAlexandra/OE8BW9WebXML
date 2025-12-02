@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Gyökérelem: az egész adatbázisszerű XML-t tartalmazza -->
+<!-- Gyökérelem -->
 <ételrendelések xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaOE8BW9.xsd">
 
 	<!-- =======================
@@ -40,11 +40,8 @@
 	     ======================= -->
 	<!-- MID = megrendelő azonosító -->
 	<megrendelő MID="1">
-		<!-- Visszatérő vendég-e -->
 		<visszatérő_vendég>igen</visszatérő_vendég>
-		<!-- Telefonszám -->
 		<telefonszám>0620000001</telefonszám>
-		<!-- Megrendelő neve -->
 		<név>Kerekes Ferenc</név>
 	</megrendelő>
 	
@@ -98,11 +95,8 @@
 	     ======================= -->
 	<!-- Kapcsolótábla rendelés és étel között: RID + EID -->
 	<rendelt RID="1" EID="1">
-		<!-- Hány darabot rendeltek -->
 		<mennyiség>2</mennyiség>
-		<!-- Egy tétel ára -->
 		<tétel_ár>2250</tétel_ár>
-		<!-- Extra megjegyzés -->
 		<megjegyzés>extra sajt</megjegyzés>
 	</rendelt>
 	

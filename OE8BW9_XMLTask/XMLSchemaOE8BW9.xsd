@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- A sémában definiáljuk a gyökérelemet és az összes hozzá tartozó típust. -->
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
@@ -249,10 +248,8 @@
 			<xs:element name="időtartam">
 				<xs:complexType>
                     <xs:sequence>
-
                         <xs:element name="kezdete" type="xs:date"/> 
                       	<xs:element name="vége" type="xs:date"/> 
-
                     </xs:sequence>
                 </xs:complexType>
 			</xs:element>
