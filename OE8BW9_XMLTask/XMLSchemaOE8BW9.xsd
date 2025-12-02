@@ -2,17 +2,13 @@
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
-    <!-- Gyökérelem: ez tartalmazza az összes adatot -->
+    <!-- Gyökérelem -->
 	<xs:element name="ételrendelések">	
 		<xs:complexType>
 	        <xs:sequence>
-                <!-- Több rendelés lehet -->
+                <!-- Több rendelés/megrendelő/fizetés lehet -->
 	            <xs:element name="rendelés" type="rendelésTipus" maxOccurs="unbounded"/>
-
-                <!-- Több megrendelő lehet -->
 	            <xs:element name="megrendelő" type="megrendelőTipus" maxOccurs="unbounded"/>
-
-                <!-- Több fizetés lehet -->
 	            <xs:element name="fizetés" type="fizetésTipus" maxOccurs="unbounded"/>
 
                 <!-- Kapcsolótábla a rendelés és az étel között -->
@@ -105,16 +101,9 @@
          ======================= -->
     <xs:complexType name="rendelésTipus">
 		<xs:sequence>
-
-            <!-- A rendelés dátuma -->
 			<xs:element name="dátum" type="xs:date"/>  
-
-            <!-- Kiszállítási cím -->
 			<xs:element name="kiszállítási_cím" type="xs:string"/> 
-
-            <!-- Fizetendő összeg -->
 			<xs:element name="összeg" type="xs:integer"/>   	            
-
 		</xs:sequence>
 
         <!-- Azonosítók -->
