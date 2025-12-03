@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>NEPTUNKÓD Órarend JSON – Táblázat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding: 20px; }
+        table th, table td { text-align: center; }
+    </style>
+</head>
+<body>
+
+<h2>NEPTUNKÓD Órarend JSON – Táblázat nézet</h2>
+
+<div class="d-flex gap-2 my-3">
+    <input type="file" id="fileInput" class="form-control" accept=".json">
+    <button class="btn btn-primary" id="loadBtn">LocalStorage betöltése</button>
+</div>
+
+<div class="mb-3">
+    <label>Keresés tárgy szerint:</label>
+    <input type="text" id="search" class="form-control" placeholder="pl. Web technológiák">
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-light">
+    <tr>
+        <th>Tárgy</th>
+        <th>Nap</th>
+        <th>Tól</th>
+        <th>Ig</th>
+        <th>Helyszín</th>
+        <th>Oktató</th>
+        <th>Szak</th>
+    </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<script>
+    const STORAGE_KEY = "orarendOE8BW9.json";
+
+    document.getElementById("fileInput").addEventListener("change", function () {
+        const file = this.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = e => {
+            try {
+                const raw = JSON.parse(e.target.result);
+
+                const data = raw.OE8BW9_orarend?.ora;
+                if (!Array.isArray(data)) {
+                    alert("Hibás JSON struktúra! Nem található: OE8BW9_orarend.ora");
+                    return;
+                }
+
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(data, null, 2));
+                renderTable();
+            } catch {
+                alert("Hibás JSON fájl!");
+            }
+        };
+        reader.readAsText(file, "utf-8");
+    });
+
+    document.getElementById("loadBtn").addEventListener("click", renderTable);
+    document.getElementById("search").addEventListener("input", renderTable);
+
+    function renderTable() {
+        const tbody = document.getElementById("tableBody");
+        tbody.innerHTML = "";
+
+        let data = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        const searchValue = document.getElementById("search").value.toLowerCase();
+
+        data = data.filter(item => item.targy.toLowerCase().includes(searchValue));
+
+        if (data.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="7">Nincs megjeleníthető adat.</td></tr>`;
+            return;
+        }
+
+        data.forEach(item => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td>${item.targy}</td>
+                <td>${item.idopont.nap}</td>
+                <td>${item.idopont.tol}</td>
+                <td>${item.idopont.ig}</td>
+                <td>${item.helyszin}</td>
+                <td>${item.oktato}</td>
+                <td>${item.szak}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+</script>
+
+</body>
+</html>

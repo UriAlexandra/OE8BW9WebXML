@@ -1,0 +1,128 @@
+{
+	"OE8BW9_orarend": {
+		"ora": [
+			{
+				"targy": "Web technológiák 1.",
+				"idopont": {
+					"nap": "Hétfő",
+					"tol": 10,
+					"ig": 12
+				},
+				"helyszin": "E5",
+				"oktato": "Dr. Agárdi Anita",
+				"szak": "Mérnök-informatikus BSc"
+			},
+			{
+				"targy": "Német műszaki szaknyelv 1.",
+				"idopont": {
+					"nap": "Hétfő",
+					"tol": 12,
+					"ig": 14
+				},
+				"helyszin": "A1/314",
+				"oktato": "Szokoli Katalin",
+				"szak": "Mérnök-informatikus BSc"
+			},
+			{
+				"targy": "Web technológiák 1.",
+				"idopont": {
+					"nap": "Hétfő",
+					"tol": 14,
+					"ig": 16
+				},
+				"helyszin": "L101",
+				"oktato": "Dr. Agárdi Anita",
+				"szak": "Mérnök-informatikus BSc"
+			},
+			{
+				"targy": "Mobil programozási alapok",
+				"idopont": {
+					"nap": "Hétfő",
+					"tol": 16,
+					"ig": 18
+				},
+				"helyszin": "L101",
+				"oktato": "Dr. Agárdi Anita",
+				"szak": "Mérnök-informatikus BSc"
+			},
+			{
+				"targy": "Mobil programozási alapok",
+				"idopont": {
+					"nap": "Hétfő",
+					"tol": 18,
+					"ig": 20
+				},
+				"helyszin": "L101",
+				"oktato": "Dr. Agárdi Anita",
+				"szak": "Mérnök-informatikus BSc"
+			},
+			{
+				"targy": "Windows rendszergazda",
+				"idopont": {
+					"nap": "Kedd",
+					"tol": 18,
+					"ig": 10
+				},
+				"helyszin": "L103",
+				"oktato": "Dr. Wagner György",
+				"szak": "Mérnök-informatikus BSc"
+			},
+			{
+				"targy": "Mesterséges intelligencia alapok",
+				"idopont": {
+					"nap": "Kedd",
+					"tol": 10,
+					"ig": 12
+				},
+				"helyszin": "E32",
+				"oktato": "Kunné Dr. Tamás Judit",
+				"szak": "Mérnök-informatikus BSc"
+			},
+			{
+				"targy": "Mesterséges intelligencia alapok",
+				"idopont": {
+					"nap": "Kedd",
+					"tol": 12,
+					"ig": 14
+				},
+				"helyszin": "E32",
+				"oktato": "Fazekas Levente",
+				"szak": "Mérnök-informatikus BSc"
+			},
+			{
+				"targy": "Windows rendszergazda",
+				"idopont": {
+					"nap": "Kedd",
+					"tol": 16,
+					"ig": 18
+				},
+				"helyszin": "L103",
+				"oktato": "Dr. Wagner György",
+				"szak": "Mérnök-informatikus BSc"
+			},
+			{
+				"targy": "Webes adatkezelő környezetek",
+				"idopont": {
+					"nap": "Szerda",
+					"tol": 8,
+					"ig": 10
+				},
+				"helyszin": "A1/310",
+				"oktato": "Dr. Kovács László József",
+				"szak": "Mérnök-informatikus BSc"
+			},
+			{
+				"targy": "Webes adatkezelő környezetek",
+				"idopont": {
+					"nap": "Szerda",
+					"tol": 10,
+					"ig": 12
+				},
+				"helyszin": "L103",
+				"oktato": "Dr. Bednarik László",
+				"szak": "Mérnök-informatikus BSc"
+			}
+		]
+		
+	}
+}
