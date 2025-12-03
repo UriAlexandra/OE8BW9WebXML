@@ -145,17 +145,8 @@
         	
     </fizetés>
     	
-	
-	
-    <!-- =======================
-	     RENDELT TÉTELEK
-	     ======================= -->
-    	
-    <!-- Kapcsolótábla rendelés és étel között: RID + EID -->
     	
     <rendelt EID="1" RID="1">
-        		
-        <!-- N:N kapcsolatot old fel: rendelés ↔ étel -->
         		
         <mennyiség>2</mennyiség>
         		
@@ -173,8 +164,7 @@
         <tétel_ár>2550</tétel_ár>
         		
         <megjegyzés>gluténmentes tészta</megjegyzés>
-        	
-        <megjegyzés>saját kérés</megjegyzés>
+        
     </rendelt>
     	
 	
