@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- Gyökérelem -->
 <ételrendelések xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaOE8BW9.xsd">
 
 	<!-- =======================
 	     RENDELÉSEK
 	     ======================= -->
-	<!-- Egy rendelés adatai; RID = rendelés azonosító, MID = megrendelő azonosító, FID = fizetés azonosító -->
+	<!-- RID = rendelés azonosító, MID = megrendelő azonosító, FID = fizetés azonosító -->
 	<rendelés RID="1" MID="1" FID="1">
 		<dátum>2025-01-01</dátum>
 		<kiszállítási_cím>Arany János utca 1.</kiszállítási_cím>
@@ -31,7 +30,6 @@
 		<összeg>9470</összeg>
 	</rendelés>
 	
-	
 	<!-- =======================
 	     MEGRENDELŐK
 	     ======================= -->
@@ -53,7 +51,6 @@
 		<telefonszám>0620987654321</telefonszám>
 		<név>Kékesi Albert</név>
 	</megrendelő>
-	
 	
 	<!-- =======================
 	     FIZETÉSEK
@@ -82,7 +79,6 @@
 		<kupon>nem</kupon>
 		<fizetés_módja>szép-kártya</fizetés_módja>
 	</fizetés>
-	
 	
 	<!-- =======================
 	     RENDELT TÉTELEK
@@ -129,7 +125,6 @@
 		<tétel_ár>2720</tétel_ár>
 		<megjegyzés>extra szezámmag</megjegyzés>
 	</rendelt>
-	
 	
 	<!-- =======================
 	     ÉTELEK LISTÁJA
@@ -182,7 +177,6 @@
 		<allergén>Tojás</allergén>
 		<típus>Pizza</típus>
 	</étel>
-	
 	
 	<!-- =======================
 	     AKCIÓK
