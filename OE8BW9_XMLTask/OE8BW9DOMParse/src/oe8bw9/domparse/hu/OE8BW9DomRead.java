@@ -15,7 +15,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-// Ez a program végigmegy az egész XML-en, és: -->
+// Ez a program végigmegy az egész XML-en, és: 
 // Beolvassa az XML-t DOM-ba
 // Minden egyes entitást (rendelés, megrendelő, fizetés, rendelt, étel, akció) végigjár
 // Az adatokat soronként kiírja a konzolra és egy .txt fájlba  
