@@ -207,13 +207,13 @@ function loadAutok() {
         if (cursor) {
             const auto = cursor.value;
 
-            // keresés
+            // Keresés
             if (
                 auto.rendszam.toLowerCase().includes(search) ||
                 auto.tipus.toLowerCase().includes(search) ||
                 auto.szin.toLowerCase().includes(search)
             ) {
-                // szűrés tulaj szerint
+                // Szűrés tulaj szerint
                 if (!filter || auto.tulaj == filter) autok.push(auto);
             }
 

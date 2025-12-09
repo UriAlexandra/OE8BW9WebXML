@@ -5,7 +5,7 @@
 	     RENDELÉSEK
 	     ======================= -->
     	
-    <!-- Egy rendelés adatai; RID = rendelés azonosító, MID = megrendelő azonosító, FID = fizetés azonosító -->
+    <!-- RID = rendelés azonosító, MID = megrendelő azonosító, FID = fizetés azonosító -->
     	
     <rendelés FID="1" MID="1" RID="1">
         		
@@ -53,7 +53,6 @@
     </rendelés>
     	
 	
-	
     <!-- =======================
 	     MEGRENDELŐK
 	     ======================= -->
@@ -92,7 +91,6 @@
         	
     </megrendelő>
     	
-	
 	
     <!-- =======================
 	     FIZETÉSEK
@@ -145,8 +143,16 @@
         	
     </fizetés>
     	
+	
+    <!-- =======================
+	     RENDELT TÉTELEK
+	     ======================= -->
+    	
+    <!-- Kapcsolótábla rendelés és étel között: RID + EID -->
     	
     <rendelt EID="1" RID="1">
+        		
+        <!-- N:N kapcsolatot old fel: rendelés ↔ étel -->
         		
         <mennyiség>2</mennyiség>
         		
@@ -164,7 +170,8 @@
         <tétel_ár>2550</tétel_ár>
         		
         <megjegyzés>gluténmentes tészta</megjegyzés>
-        
+        	
+        <megjegyzés>saját kérés</megjegyzés>
     </rendelt>
     	
 	
@@ -222,7 +229,6 @@
         	
     </rendelt>
     	
-	
 	
     <!-- =======================
 	     ÉTELEK LISTÁJA
@@ -321,7 +327,6 @@
         	
     </étel>
     	
-	
 	
     <!-- =======================
 	     AKCIÓK
